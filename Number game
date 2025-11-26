@@ -1,11 +1,15 @@
 #include <stdio.h>
+#include<stdlib.h>
+#include <time.h>
 
 int main() {
     int random ,guess;
     int no_of_guess=0;
+    srand(time(NULL));\\on time
 
     printf("Welcome to the world of guessing number \n");
-    
+    random = rand() % 100 + 1;
+    printf("Number generated is : %d",random);
     do{
         printf("please Enter your guess between(1 to 100): ");
         scanf("%d", &guess);
